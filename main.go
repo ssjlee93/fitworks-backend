@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/ssjlee93/fitworks-backend/configs"
 	"github.com/ssjlee93/fitworks-backend/controllers"
-	"github.com/ssjlee93/fitworks-backend/entities"
 	"github.com/ssjlee93/fitworks-backend/helper"
 	"github.com/ssjlee93/fitworks-backend/repositories"
 	"github.com/ssjlee93/fitworks-backend/router"
@@ -17,7 +16,7 @@ func main() {
 	//Database
 	db := configs.DatabaseConnection()
 
-	db.Table("album").AutoMigrate(&entities.Album{})
+	//db.Table("album").AutoMigrate(&entities.Album{})
 
 	//Init Repository
 	albumRepository := repositories.NewAlbumsRepositoryImpl(db)
