@@ -2,7 +2,7 @@ package services
 
 import (
 	"github.com/ssjlee93/fitworks-backend/dtos/responses"
-	"github.com/ssjlee93/fitworks-backend/repositories"
+	"github.com/ssjlee93/fitworks-backend/internal/repositories"
 )
 
 type AlbumsServiceImpl struct {
