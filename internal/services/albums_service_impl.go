@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/ssjlee93/fitworks-backend/dtos/responses"
+	"github.com/ssjlee93/fitworks-backend/internal/dtos/responses"
 	"github.com/ssjlee93/fitworks-backend/internal/repositories"
 )
 

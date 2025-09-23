@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"github.com/ssjlee93/fitworks-backend/entities"
+	"github.com/ssjlee93/fitworks-backend/internal/entities"
 	"gorm.io/gorm"
 	"log"
 )
