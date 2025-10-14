@@ -21,13 +21,15 @@ func main() {
 	// controller
 	ctr := controllers.NewUserController()
 
-	// Create a new ServeMux
+	// Create a new request multiplexer
+	// Take incoming requests and dispatch them to the matching handlers
 	mux := http.NewServeMux()
-	// Register handlers for different routes
-	mux.HandleFunc("GET /users", ctr.Get)
-	////mux.HandleFunc("GET /users/{id}", )
-	//mux.HandleFunc("POST /users", ctr.Create)
 
+	// Register the routes and handlers
+	mux.Handle("/", &controllers.HomeHandler{})
+	mux.HandleFunc("GET /users", ctr.Get)
+
+	// Run the server
 	fmt.Println("Server starting on port 8080...")
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
